@@ -6,7 +6,7 @@ public class Cotacao {
     private UUID idCotacao;
     private String idMoeda;
     private LocalDate dtData;
-    private float vrValor;
+    private Float vrValor;
 
     public UUID getIdCotacao() {
         return idCotacao;
@@ -35,4 +35,5 @@ public class Cotacao {
     public void setVrValor(float vrValor) {
         this.vrValor = vrValor;
     }
+
 }

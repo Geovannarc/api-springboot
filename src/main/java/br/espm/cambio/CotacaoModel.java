@@ -1,6 +1,6 @@
 package br.espm.cambio;
 
-import java.sql.Date;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -8,8 +8,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="cotacao")
@@ -40,7 +38,7 @@ public class CotacaoModel {
 
     public Cotacao to(){
         Cotacao cotacao = new Cotacao();
-        cotacao.setIdCotacao(UUID.fromString(this.idMoeda));
+        cotacao.setIdCotacao(UUID.fromString(this.idCotacao));
         cotacao.setIdMoeda(this.idMoeda);
         cotacao.setDtData(this.dtData);
         cotacao.setVrValor(this.vrValor);
