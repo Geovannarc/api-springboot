@@ -14,8 +14,11 @@ public interface CotacaoRepository extends CrudRepository<CotacaoModel, String> 
     @Override
     Optional<CotacaoModel> findById(String idCotacao);
     
-    @Query("SELECT m from CotacaoModel m WHERE UPPER(m.idMoeda) = UPPER(:simbolo)")
-    Optional<CotacaoModel> findBySimbolo(@Param("simbolo") String simbolo);
+   @Query("SELECT c from CotacaoModel c WHERE UPPER(c.idMoeda) = UPPER(:simbolo)")
+    Iterable<CotacaoModel> findBySimbolo(@Param("simbolo") String simbolo);
+
+    @Query("SELECT c from CotacaoModel c WHERE UPPER(c.dtData) = UPPER(:data) and c.idMoeda = :idMoeda")
+    Optional<CotacaoModel> findByDate(@Param("data") String data);
 
 }
 
