@@ -14,4 +14,4 @@ Sistema feito em Spring Boot e tem as seguintes APIs disponibilizadas:
 |  GET | /cotacao/{símbolo}   | 
 |  POST  |  /cotacao/{símbolo}/{ano}/{mes}/{dia}  | 
 
-O script sql está no arquivo [script.txt](\script.txt)
+O script sql está no arquivo [script.txt](script.txt)
